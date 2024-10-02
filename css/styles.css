@@ -1,12 +1,4 @@
-/* styles.css */
-
-/* Reset some default browser styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Default styles (for larger screens) */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -21,42 +13,28 @@ header {
   text-align: center;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-}
+/* Mobile styles */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column; /* Stack the navigation links vertically */
+  }
 
-nav ul li {
-  display: inline;
-  margin: 0 15px;
-}
+  nav ul li {
+    margin: 10px 0; /* Add margin between items */
+  }
 
-nav ul li a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: bold;
-}
+  main {
+    padding: 10px; /* Reduce padding on smaller screens */
+  }
 
-nav ul li a:hover {
-  text-decoration: underline;
-}
+  section {
+    margin-bottom: 20px; /* Less margin on sections */
+    padding: 15px; /* Less padding */
+  }
 
-main {
-  padding: 20px;
-  max-width: 800px;
-  margin: auto;
-}
-
-section {
-  margin-bottom: 40px;
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-  color: #35424a;
+  h2 {
+    font-size: 1.5em; /* Smaller headings */
+  }
 }
 
 footer {
