@@ -13,6 +13,7 @@ body {
   display: flex;
   flex-direction: column; /* Arrangerer elementerne i en kolonne */
   font-family: Arial, sans-serif;
+  min-height: 100vh;
   background-color: #f4f4f4;
   color: #333;
 }
@@ -87,6 +88,7 @@ body {
 .main {
   padding: 20px;
   flex: 1; /* Gør, at main indholdet fylder den tilgængelige plads */
+  display:flex;
 }
 
 section {
@@ -121,11 +123,10 @@ section {
   width: 200px; /* Juster bredden som ønsket */
   background-color: #f4f4f4;
   padding: 15px;
-  position: fixed; /* Fast positionering */
-  height: 100vh; /* Fyld hele højden af viewport */
+  position: sticky; /* Fast positionering */
+  height: calc(100vh - 60px); /* Fyld hele højden af viewport */
   overflow-y: auto; /* Gør det muligt at scrolle, hvis indholdet overskrider højden */
-  transform: translateX(-100%); /* Skjul sidebar fra starten */
-  transition: transform 0.3s ease; /* Tilføj en overgangseffekt */
+  top: 60px;
 }
 
 .sidebar.active {
@@ -153,14 +154,6 @@ section {
   background-color: #ffffff;
 }
 
-.menu-toggle {
-  display: none; /* Skjul menu-ikon som standard */
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 24px; /* Juster størrelse på ikon */
-}
-
 /* Responsiv design til mindre skærme */
 @media (max-width: 768px) {
   .sidebar {
@@ -182,15 +175,13 @@ section {
     margin: 5px 0; /* Juster margin mellem knapper */
   }
 
-  .menu-toggle {
-    display: block; /* Vis menu-ikon på mindre skærme */
+  footer {
+    text-align: center;
+    height: 60px;
+    padding: 10px 0;
+    position: relative;
+    background: #35424a;
+    color: #ffffff;
+    margin-top: auto; /* Sørg for, at footeren skubbes til bunden */
   }
-}
-
-footer {
-  text-align: center;
-  padding: 10px 0;
-  background: #35424a;
-  color: #ffffff;
-  margin-top: auto; /* Sørg for, at footeren skubbes til bunden */
 }
