@@ -92,6 +92,26 @@ section {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px; /* Juster afstand mellem billeder */
+  padding: 16px; /* Juster indvendig margen */
+}
+
+.grid-item {
+  background-color: #f9f9f9; /* Baggrundsfarve for grid item */
+  border: 1px solid #ddd; /* Kan justeres for at tilføje ramme */
+  border-radius: 8px; /* Runde hjørner */
+  overflow: hidden; /* For at undgå overfyldte indhold */
+  text-align: center; /* Centrer tekst og billeder */
+}
+
+.grid-item img {
+  width: 100%; /* Gør billederne responsive */
+  height: auto; /* Bevarer billedets proportioner */
+}
+
 footer {
   text-align: center;
   padding: 10px 0;
