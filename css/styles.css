@@ -7,7 +7,13 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%; /* Sørg for, at html og body fylder hele højden */
+}
+
 body {
+  display: flex;
+  flex-direction: column; /* Arrangerer elementerne i en kolonne */
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   color: #333;
@@ -82,6 +88,7 @@ body {
 
 main {
   padding: 20px;
+  flex: 1; /* Gør, at main indholdet fylder den tilgængelige plads */
 }
 
 section {
@@ -132,19 +139,42 @@ section {
   margin: 10px 0;
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
-  color: white;
+  background-color: RGB(184,178,164);
+  color: #35424a;
   border: none;
   cursor: pointer;
 }
 
 .sidebar button:hover {
-  background-color: #0056b3;
+  background-color: #ffffff;
+}
 
-  footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #35424a;
-    color: #ffffff;
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background: #35424a;
+  color: #ffffff;
+  margin-top: auto; /* Sørg for, at footeren skubbes til bunden */
+}
+
+/* Responsiv design til mindre skærme */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%; /* Gør sidebar fuld bredde på mindre skærme */
+    position: relative; /* Ændrer positionering for mobil */
+    height: auto; /* Sætter højden til auto */
+  }
+
+  .content {
+    margin-left: 0; /* Fjern margin på mindre skærme */
+    padding: 10px; /* Juster polstring */
+  }
+
+  .nav {
+    flex-direction: column; /* Arranger nav i kolonne på mindre skærme */
+  }
+
+  .nav button {
+    margin: 5px 0; /* Juster margin mellem knapper */
   }
 }
