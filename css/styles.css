@@ -112,9 +112,39 @@ section {
   height: auto; /* Bevarer billedets proportioner */
 }
 
-footer {
-  text-align: center;
-  padding: 10px 0;
-  background: #35424a;
-  color: #ffffff;
+.sidebar {
+  width: 200px; /* Juster bredden som ønsket */
+  background-color: #f4f4f4;
+  padding: 15px;
+  position: fixed; /* Fast positionering */
+  height: 100vh; /* Fyld hele højden af viewport */
+  overflow-y: auto; /* Gør det muligt at scrolle, hvis indholdet overskrider højden */
+}
+
+.content {
+  margin-left: 220px; /* Giver plads til sidebar */
+  padding: 20px;
+  flex-grow: 1; /* Gør indholdet responsivt */
+}
+
+.sidebar button {
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar button:hover {
+  background-color: #0056b3;
+
+  footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #35424a;
+    color: #ffffff;
+  }
 }
