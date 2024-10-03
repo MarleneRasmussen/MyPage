@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galleri - Din Firmaside</title>
   <link rel="stylesheet" href="../css/styles.css">
+  <link rel="scrip" href="../js/app.js">
 </head>
 <body>
 <header class="header">
   <div class="logo">
-    <img src="img/logo.png" alt="Firma Logo" />
+    <img src="../img/logo.png" alt="Firma Logo" />
     <h1>Firmanavn</h1>
   </div>
   <nav class="nav">
@@ -26,26 +27,34 @@
 </header>
 
 <main>
+  <div class="filter-container">
+    <h2>Filter</h2>
+    <label><input type="checkbox" value="all" checked onchange="filterGallery()"> Alle</label><br>
+    <label><input type="checkbox" value="nature" onchange="filterGallery()"> Natur</label><br>
+    <label><input type="checkbox" value="city" onchange="filterGallery()"> Byer</label><br>
+    <label><input type="checkbox" value="people" onchange="filterGallery()"> Mennesker</label><br>
+  </div>
+
   <section id="galleri">
     <h2>Galleri</h2>
-    <div class="grid-container">
-      <div class="grid-item">
+    <div class="grid-container" id="grid-container">
+      <div class="grid-item" data-topic="nature">
         <img src="img/billede1.jpg" alt="Billede 1">
         <p>Beskrivelse af billede 1.</p>
       </div>
-      <div class="grid-item">
+      <div class="grid-item" data-topic="city">
         <img src="img/billede2.jpg" alt="Billede 2">
         <p>Beskrivelse af billede 2.</p>
       </div>
-      <div class="grid-item">
+      <div class="grid-item" data-topic="people">
         <img src="img/billede3.jpg" alt="Billede 3">
         <p>Beskrivelse af billede 3.</p>
       </div>
-      <div class="grid-item">
+      <div class="grid-item" data-topic="nature">
         <img src="img/billede4.jpg" alt="Billede 4">
         <p>Beskrivelse af billede 4.</p>
       </div>
-      <!-- Tilføj flere grid-item efter behov -->
+      <!-- Add more images with appropriate data-topic attributes -->
     </div>
   </section>
 </main>
