@@ -6,12 +6,12 @@
 }
 
 html, body {
-  height: 100%; /* Sørg for, at html og body fylder hele højden */
+  height: 100%; 
 }
 
 body {
   display: flex;
-  flex-direction: column; /* Arrangerer elementerne i en kolonne */
+  flex-direction: column;
   font-family: Arial, sans-serif;
   min-height: 100vh;
   background-color: #f4f4f4;
@@ -36,8 +36,8 @@ body {
 }
 
 .logo img {
-  height: 50px; /* Juster højden på logoet */
-  margin-right: 20px; /* Plads mellem logo og firmanavn */
+  height: 50px;
+  margin-right: 20px;
 }
 
 .nav {
@@ -87,7 +87,7 @@ body {
 
 .main {
   padding: 20px;
-  flex: 1; /* Gør, at main indholdet fylder den tilgængelige plads */
+  flex: 1;
   display:flex;
 }
 
@@ -102,41 +102,41 @@ section {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 16px; /* Juster afstand mellem billeder */
-  padding: 16px; /* Juster indvendig margen */
+  gap: 16px;
+  padding: 16px;
 }
 
 .grid-item {
-  background-color: #f9f9f9; /* Baggrundsfarve for grid item */
-  border: 1px solid #ddd; /* Kan justeres for at tilføje ramme */
-  border-radius: 8px; /* Runde hjørner */
-  overflow: hidden; /* For at undgå overfyldte indhold */
-  text-align: center; /* Centrer tekst og billeder */
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
 }
 
 .grid-item img {
-  width: 100%; /* Gør billederne responsive */
-  height: auto; /* Bevarer billedets proportioner */
+  width: 100%;
+  height: auto;
 }
 
 .sidebar {
-  width: 200px; /* Juster bredden som ønsket */
+  width: 200px;
   background-color: #f4f4f4;
   padding: 15px;
-  position: sticky; /* Fast positionering */
-  height: calc(100vh - 60px); /* Fyld hele højden af viewport */
-  overflow-y: auto; /* Gør det muligt at scrolle, hvis indholdet overskrider højden */
+  position: sticky;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
   top: 60px;
 }
 
 .sidebar.active {
-  transform: translateX(0); /* Vis sidebar, når aktiv */
+  transform: translateX(0);
 }
 
 .content {
-  margin-left: 220px; /* Giver plads til sidebar */
+  margin-left: 220px;
   padding: 20px;
-  flex-grow: 1; /* Gør indholdet responsivt */
+  flex-grow: 1;
 }
 
 .sidebar button {
@@ -161,7 +161,7 @@ footer {
   position: relative;
   background: #35424a;
   color: #ffffff;
-  margin-top: auto; /* Sørg for, at footeren skubbes til bunden */
+  margin-top: auto;
 }
 
 /* Responsiv design til mindre skærme */
@@ -170,29 +170,30 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 5px;
   }
 
   .logo {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 
   .search-container {
     width: 100%;
-    margin-bottom: 5px; /* Mindre plads mellem søgefelt og knapper */
+    margin-bottom: 5px;
     display: flex;
     justify-content: center;
   }
 
   .search-container input {
     flex-grow: 1;
-    padding: 8px; /* Juster padding for inputfeltet for at gøre det lavere */
+    padding: 6px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-right: 5px; /* Plads mellem input og søgeknap */
+    margin-right: 5px;
   }
 
   .search-container button {
-    padding: 6px 10px; /* Lavere padding for knappen */
+    padding: 6px 10px;
     border: none;
     background-color: #35424a;
     color: #ffffff;
@@ -203,15 +204,15 @@ footer {
   .nav {
     width: 100%;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     margin-top: 5px;
   }
 
   .nav button {
     flex: 1;
     margin: 2px;
-    font-size: 10px;
-    padding: 6px; /* Juster padding for knapperne for at gøre dem lavere */
+    font-size: 14px;
+    padding: 8px;
     min-width: 0;
   }
 }
