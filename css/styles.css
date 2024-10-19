@@ -165,38 +165,42 @@ footer {
 }
 
 /* Responsiv design til mindre skærme */
-@media (max-width: 768px) {
-  .sidebar {
-    width: 100%; /* Gør sidebar fuld bredde på mindre skærme */
-    position: relative; /* Ændrer positionering for mobil */
-    height: auto; /* Sætter højden til auto */
+@media (max-width: 650px) {
+  .header {
+    flex-direction: column; /* Arranger header-elementer i en kolonne */
+    align-items: center; /* Centrerer indholdet */
+    text-align: center; /* Centrerer tekst */
   }
 
-  .content {
-    margin-left: 0; /* Fjern margin på mindre skærme */
-    padding: 10px; /* Juster polstring */
+  .logo {
+    margin-bottom: 10px; /* Plads mellem logo og søgefelt */
+  }
+
+  .search-container {
+    margin-bottom: 10px; /* Plads mellem søgefelt og knapper */
+    width: 100%; /* Sørg for at søgefeltet fylder hele bredden */
   }
 
   .nav {
-    filter: ; /* Arranger nav i kolonne på mindre skærme */
+    width: 100%; /* Sørg for at knapperne fylder hele bredden */
+    justify-content: space-around; /* Fordel knapperne jævnt */
+    flex-wrap: wrap; /* Gør det muligt for knapperne at wrappe */
   }
 
   .nav button {
-    margin: 5px 0; /* Juster margin mellem knapper */
+    flex: 1; /* Gør knapperne responsive og fylder tilgængelig plads */
+    min-width: 80px; /* Minimum bredde for knapperne */
+    margin: 5px 0; /* Plads mellem knapperne */
+    font-size: 16px; /* Juster skriftstørrelse */
   }
 
-  .menu-toggle {
-    display: block; /* Vis menu-ikon på små skærme */
-    margin-bottom: 10px; /* Plads mellem burger og søgefelt */
+  /* Juster søgefeltet */
+  .search-container input {
+    width: calc(100% - 12px); /* Gør inputfeltet responsivt */
   }
 
-  footer {
-    text-align: center;
-    height: 60px;
-    padding: 10px 0;
-    position: relative;
-    background: #35424a;
-    color: #ffffff;
-    margin-top: auto; /* Sørg for, at footeren skubbes til bunden */
+  .search-container button {
+    width: 100%; /* Gør søgeknappen responsiv */
+    margin-top: 5px; /* Plads over knappen */
   }
 }

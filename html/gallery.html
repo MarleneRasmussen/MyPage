@@ -34,6 +34,8 @@
   <button onclick="window.location.href='gallery/romantic.html'">Romantic</button>
 </div>
 
+<button class="menu-toggle" onclick="toggleSidebar()">&#9776;</button>
+
 <!-- all pictures -->
 
 <div class="content">
@@ -51,5 +53,13 @@
 <footer>
   <p>&copy; 2024 Hugged by Hand. Alle rettigheder forbeholdes.</p>
 </footer>
+
+<script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('active');
+  }
+</script>
+
 </body>
 </html>
