@@ -167,32 +167,32 @@ footer {
 /* Responsiv design til mindre skærme */
 @media (max-width: 600px) {
   .header {
-    flex-direction: column; /* Arranger header-elementer i en kolonne */
-    align-items: center; /* Centrerer indholdet */
-    text-align: center; /* Centrerer tekst */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .logo {
-    margin-bottom: 10px; /* Plads mellem logo og søgefelt */
+    margin-bottom: 10px;
   }
 
   .search-container {
-    width: 100%; /* Søgefeltet fylder hele bredden */
-    margin-bottom: 10px; /* Plads mellem søgefelt og knapper */
-    display: flex; /* Arrangerer input og knap i en række */
-    justify-content: center; /* Center søgefeltet */
+    width: 100%;
+    margin-bottom: 5px; /* Mindre plads mellem søgefelt og knapper */
+    display: flex;
+    justify-content: center;
   }
 
   .search-container input {
-    flex-grow: 1; /* Gør inputfeltet responsivt */
-    padding: 10px; /* Juster padding for inputfeltet */
+    flex-grow: 1;
+    padding: 8px; /* Juster padding for inputfeltet for at gøre det lavere */
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-right: 5px; /* Plads mellem input og søgeknap */
   }
 
   .search-container button {
-    padding: 8px 12px; /* Juster padding for knappen */
+    padding: 6px 10px; /* Lavere padding for knappen */
     border: none;
     background-color: #35424a;
     color: #ffffff;
@@ -201,17 +201,17 @@ footer {
   }
 
   .nav {
-    width: 100%; /* Sørg for at knapperne fylder hele bredden */
-    display: flex; /* Gør nav til flex-container */
-    justify-content: space-around; /* Fordel knapperne jævnt med plads omkring dem */
-    margin-top: 10px; /* Plads mellem søgefelt og knapper */
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 5px;
   }
 
   .nav button {
-    flex: 1; /* Gør knapperne lige store */
-    max-width: 120px; /* Maksimal bredde for knapperne */
-    margin: 0 5px; /* Lidt plads mellem knapperne */
-    font-size: 14px; /* Juster skriftstørrelse */
-    padding: 8px; /* Juster padding for knapperne */
+    flex: 1;
+    margin: 2px;
+    font-size: 10px;
+    padding: 6px; /* Juster padding for knapperne for at gøre dem lavere */
+    min-width: 0;
   }
 }
