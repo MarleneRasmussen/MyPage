@@ -259,11 +259,18 @@ footer {
   .grid-container {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .sidebar.active {
+    display: none;
+  }
 }
 
 @media (max-width: 815px) {
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .sidebar.active {
+    display: none;
   }
 }
 
