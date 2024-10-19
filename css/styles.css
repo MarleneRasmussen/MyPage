@@ -121,12 +121,13 @@ section {
 
 .sidebar {
   display: none; /* Skjul sidebar som standard */
-  position: fixed; /* Fast positionering */
-  top: 0; /* Start ved toppen */
-  left: 0; /* Start ved venstre */
-  width: 200px; /* Bredde på sidebar */
-  height: 100%; /* Fyld hele højden */
-  background-color: #f4f4f4; /* Baggrundsfarve */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #f4f4f4;
+  z-index: 1000;
 }
 
 .content {
@@ -156,7 +157,7 @@ section {
 }
 
 .menu-toggle {
-  display: block; /* Skjul knappen som standard */
+  display: none; /* Skjul knappen som standard */
   width: 40px;
   height: 40px;
   background-color: #35424a;
@@ -164,8 +165,7 @@ section {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  position: relative;
-  margin-top: 10px;
+  margin: 10px 0; /* Giv lidt afstand over og under */
 }
 
 footer {
@@ -178,16 +178,6 @@ footer {
   margin-top: auto;
 }
 
-@media (min-width: 601px) {
-  .menu-toggle {
-    display: none; /* Skjul knappen på skærme større end 600px */
-  }
-
-  .sidebar {
-    display: block; /* Vis sidebar på større skærme */
-  }
-}
-
   /* Responsiv design til mindre skærme */
   @media (max-width: 600px) {
     .header {
@@ -195,6 +185,14 @@ footer {
       align-items: center;
       text-align: center;
       padding: 5px;
+    }
+
+    .menu-toggle {
+      display: block; /* Vis knappen på små skærme */
+    }
+
+    .sidebar {
+      display: none; /* Skjul sidebar på små skærme */
     }
 
     .logo {
