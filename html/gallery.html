@@ -27,6 +27,7 @@
 
 <div class="sidebar">
   <h2>Inspired by</h2>
+  <button class="menu-toggle" onclick="toggleSidebar()">&#9776;</button>
   <button onclick="window.location.href='gallery/blackAndWhite.html'">Black and White</button>
   <button onclick="window.location.href='gallery/colorful.html'">Colorful</button>
   <button onclick="window.location.href='gallery/morden.html'">Mordern</button>
@@ -34,7 +35,7 @@
   <button onclick="window.location.href='gallery/romantic.html'">Romantic</button>
 </div>
 
-<button class="menu-toggle" onclick="toggleSidebar()">&#9776;</button>
+
 
 <!-- all pictures -->
 
@@ -56,8 +57,16 @@
 
 <script>
   function toggleSidebar() {
-    const sidebar = document.querySelector('.sidebar'); // Ændret til at bruge class selector
+    const sidebar = document.querySelector('.sidebar');
     sidebar.classList.toggle('active'); // Toggles active class
+
+    // Hvis sidebar er aktiv, skal vi give margin til content
+    const content = document.querySelector('.content');
+    if (sidebar.classList.contains('active')) {
+      content.style.marginLeft = '200px'; // Plads til sidebar
+    } else {
+      content.style.marginLeft = '0'; // Ingen margin
+    }
   }
 </script>
 

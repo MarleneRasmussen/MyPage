@@ -120,14 +120,15 @@ section {
 }
 
 .sidebar {
-  width: 200px;
-  background-color: #f4f4f4;
-  padding: 15px;
-  position: sticky;
-  height: calc(100vh - 60px);
-  overflow-y: auto;
-  top: 60px;
-  display: none;
+  display: none; /* Skjul sidebar som standard */
+  position: fixed; /* Fast positionering */
+  top: 0; /* Start ved toppen */
+  left: 0; /* Start ved venstre */
+  width: 200px; /* Bredde på sidebar */
+  height: 100%; /* Fyld hele højden */
+  background-color: #f4f4f4; /* Baggrundsfarve */
+  z-index: 1000; /* Ligger bag menu-toggle */
+  transition: transform 0.3s ease; /* Animation ved visning */
 }
 
 .content {
@@ -153,12 +154,24 @@ section {
 
 /* Vis sidebar, når menu-toggle knappen klikkes */
 .sidebar.active {
-  display: block; /* Vis sidebar, når aktiv */
+  display: block; /* Vis sidebar når aktiv */
+  transform: translateX(0); /* Vis sidebar */
 }
 
 /* Vis menu-toggle på små skærme */
 .menu-toggle {
-  display: block; /* Vis knappen som standard */
+  display: block; /* Vis knappen som standard på mobile skærme */
+  width: 40px; /* Giv knappen en bredde */
+  height: 40px; /* Giv knappen en højde */
+  background-color: #35424a; /* Baggrundsfarve */
+  color: #ffffff; /* Tekstfarve */
+  border: none; /* Ingen kant */
+  border-radius: 5px; /* Runde hjørner */
+  cursor: pointer; /* Pointer cursor ved hover */
+  position: absolute; /* Absolut positionering */
+  top: 10px; /* Afstand fra toppen */
+  left: 10px; /* Afstand fra venstre */
+  z-index: 1001; /* Sørg for, at knappen er ovenpå */
 }
 
 footer {
@@ -231,5 +244,9 @@ footer {
     font-size: 12px;
     padding: 6px;
     min-width: 0;
+  }
+
+  .content {
+    transition: margin-left 0.3s ease; /* Animation ved sidebar visning */
   }
 }
