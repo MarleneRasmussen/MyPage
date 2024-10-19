@@ -101,10 +101,11 @@ section {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Fire kolonner */
-  gap: 16px; /* Afstand mellem grid-elementer */
+  grid-template-columns: repeat(4, 1fr); /* Fire kolonner på brede skærme */
+  gap: 16px; /* Afstand mellem elementerne */
   padding: 16px;
-  overflow-y: auto; /* Tilføj mulighed for at scrolle nedad hvis nødvendigt */
+  width: 100%; /* Sørg for, at grid fylder hele bredden */
+  overflow-y: auto; /* Tillad scrolling hvis nødvendigt */
 }
 
 .grid-item {
@@ -147,9 +148,10 @@ section {
 }
 
 .content {
-  margin-left: 220px;
   padding: 20px;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar button {
