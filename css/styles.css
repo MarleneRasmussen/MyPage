@@ -252,7 +252,6 @@ footer {
   }
 }
 
-
   @media (max-width: 1000px) {
     .grid-container {
       grid-template-columns: repeat(3, 1fr);
@@ -262,7 +261,16 @@ footer {
     }
   }
 
-  @media (max-width: 800px) {
+@media (max-width: 805px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sidebar.active {
+    display: block;
+  }
+}
+
+  @media (max-width: 635px) {
     .grid-container {
       grid-template-columns: repeat(3, 1fr);
     }
@@ -271,6 +279,16 @@ footer {
       grid-template-columns: 2fr;
     }
   }
+
+@media (max-width: 615px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-container.shift-to-one-column {
+    grid-template-columns: 1fr;
+  }
+}
 
 
 
