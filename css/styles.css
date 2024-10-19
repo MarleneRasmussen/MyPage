@@ -151,23 +151,6 @@ section {
   background-color: #ffffff;
 }
 
-/* Vis sidebar, når menu-toggle knappen klikkes */
-.sidebar.active {
-  display: block;
-}
-
-.menu-toggle {
-  display: none; /* Skjul knappen som standard */
-  width: 40px;
-  height: 40px;
-  background-color: #35424a;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 10px 0; /* Giv lidt afstand over og under */
-}
-
 footer {
   text-align: center;
   height: 60px;
@@ -178,6 +161,26 @@ footer {
   margin-top: auto;
 }
 
+/* Vis sidebar, når menu-toggle knappen klikkes */
+.sidebar.active {
+  display: block; /* Vis sidebar, når aktiv */
+}
+
+/* Vis menu-toggle på små skærme */
+.menu-toggle {
+  display: block; /* Vis knappen som standard */
+}
+
+@media (min-width: 601px) {
+  .menu-toggle {
+    display: none; /* Skjul knappen på skærme større end 600px */
+  }
+
+  .sidebar {
+    display: block; /* Vis sidebar på større skærme */
+  }
+}
+
   /* Responsiv design til mindre skærme */
   @media (max-width: 600px) {
     .header {
@@ -185,14 +188,6 @@ footer {
       align-items: center;
       text-align: center;
       padding: 5px;
-    }
-
-    .menu-toggle {
-      display: block; /* Vis knappen på små skærme */
-    }
-
-    .sidebar {
-      display: none; /* Skjul sidebar på små skærme */
     }
 
     .logo {
