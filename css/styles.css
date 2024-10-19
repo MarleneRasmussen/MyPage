@@ -135,8 +135,6 @@ section {
   width: 200px;
   background-color: #f4f4f4;
   padding: 10px;
-  position: sticky;
-  top: 60px;
   height: 100vh;
   display: block;
 }
@@ -259,13 +257,13 @@ footer {
 
 @media (max-width: 815px) {
   .grid-container {
-    grid-template-columns: repeat(3, 1fr); /* Tre kolonner på mellemstore skærme */
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 450px) {
   .grid-container {
-    grid-template-columns: repeat(2, 1fr); /* To kolonner på små skærme */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
