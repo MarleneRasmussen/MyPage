@@ -108,6 +108,10 @@ section {
   overflow-y: auto;
 }
 
+.grid-container.shift-down {
+  margin-top: 60px;
+}
+
 .content {
   display: flex; /* Flexbox layout */
   flex-grow: 1;
