@@ -56,8 +56,8 @@
 
 <script>
   function toggleSidebar() {
-    const sidebar = document.getElementById('sidebar');
-    sidebar.classList.toggle('active');
+    const sidebar = document.querySelector('.sidebar'); // Ændret til at bruge class selector
+    sidebar.classList.toggle('active'); // Toggles active class
   }
 </script>
 

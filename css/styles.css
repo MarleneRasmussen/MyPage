@@ -127,10 +127,7 @@ section {
   height: calc(100vh - 60px);
   overflow-y: auto;
   top: 60px;
-}
-
-.sidebar.active {
-  transform: translateX(0);
+  display: none;
 }
 
 .content {
@@ -154,6 +151,16 @@ section {
   background-color: #ffffff;
 }
 
+/* Vis sidebar, når menu-toggle knappen klikkes */
+.sidebar.active {
+  display: block; /* Vis sidebar, når aktiv */
+}
+
+/* Vis menu-toggle på små skærme */
+.menu-toggle {
+  display: block; /* Vis knappen som standard */
+}
+
 footer {
   text-align: center;
   height: 60px;
@@ -162,6 +169,16 @@ footer {
   background: #35424a;
   color: #ffffff;
   margin-top: auto;
+}
+
+@media (min-width: 601px) {
+  .menu-toggle {
+    display: none; /* Skjul knappen på skærme større end 600px */
+  }
+
+  .sidebar {
+    display: block; /* Vis sidebar på større skærme */
+  }
 }
 
 /* Responsiv design til mindre skærme */
