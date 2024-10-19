@@ -231,7 +231,7 @@ footer {
       min-width: 0;
     }
   }
-@media (max-width: 600px) {
+@media (max-width: 635px) {
     .sidebar {
       display: none;
       position: relative;
