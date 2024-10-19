@@ -165,42 +165,53 @@ footer {
 }
 
 /* Responsiv design til mindre skærme */
-@media (max-width: 650px) {
-  .header {
-    flex-direction: column; /* Arranger header-elementer i en kolonne */
-    align-items: center; /* Centrerer indholdet */
-    text-align: center; /* Centrerer tekst */
-  }
+  @media (max-width: 600px) {
+    .header {
+      flex-direction: column; /* Arranger header-elementer i en kolonne */
+      align-items: center; /* Centrerer indholdet */
+      text-align: center; /* Centrerer tekst */
+    }
 
-  .logo {
-    margin-bottom: 10px; /* Plads mellem logo og søgefelt */
-  }
+    .logo {
+      margin-bottom: 10px; /* Plads mellem logo og søgefelt */
+    }
 
-  .search-container {
-    margin-bottom: 10px; /* Plads mellem søgefelt og knapper */
-    width: 100%; /* Sørg for at søgefeltet fylder hele bredden */
-  }
+    .search-container {
+      width: 100%; /* Søgefeltet fylder hele bredden */
+      margin-bottom: 10px; /* Plads mellem søgefelt og knapper */
+      display: flex; /* Gør det muligt at arrangere input og knap i en række */
+      justify-content: center; /* Center søgefeltet */
+    }
 
-  .nav {
-    width: 100%; /* Sørg for at knapperne fylder hele bredden */
-    justify-content: space-around; /* Fordel knapperne jævnt */
-    flex-wrap: wrap; /* Gør det muligt for knapperne at wrappe */
-  }
+    .search-container input {
+      flex-grow: 1; /* Gør inputfeltet responsivt */
+      padding: 10px; /* Juster padding for inputfeltet */
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-right: 5px; /* Plads mellem input og søgeknap */
+    }
 
-  .nav button {
-    flex: 1; /* Gør knapperne responsive og fylder tilgængelig plads */
-    min-width: 80px; /* Minimum bredde for knapperne */
-    margin: 5px 0; /* Plads mellem knapperne */
-    font-size: 16px; /* Juster skriftstørrelse */
-  }
+    .search-container button {
+      padding: 8px 12px; /* Juster padding for knappen */
+      border: none;
+      background-color: #35424a;
+      color: #ffffff;
+      border-radius: 5px;
+      cursor: pointer;
+      /* Ingen margin, så knappen strækker sig næsten helt ud til siderne */
+    }
 
-  /* Juster søgefeltet */
-  .search-container input {
-    width: calc(100% - 12px); /* Gør inputfeltet responsivt */
-  }
+    .nav {
+      width: 100%; /* Sørg for at knapperne fylder hele bredden */
+      display: flex; /* Gør nav til flex-container */
+      justify-content: space-between; /* Fordel knapperne jævnt */
+      margin-top: 10px; /* Plads mellem søgefelt og knapper */
+    }
 
-  .search-container button {
-    width: 100%; /* Gør søgeknappen responsiv */
-    margin-top: 5px; /* Plads over knappen */
+    .nav button {
+      flex: 1; /* Gør knapperne lige store */
+      margin: 0 5px; /* Lidt plads mellem knapperne */
+      min-width: 80px; /* Minimum bredde for knapperne */
+      font-size: 16px; /* Juster skriftstørrelse */
+    }
   }
-}
