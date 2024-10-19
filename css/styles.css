@@ -128,13 +128,13 @@ section {
 }
 
 .sidebar {
-  display: none;
-  width: 200px; /* Fast bredde til sidebar */
+  width: 200px;
   background-color: #f4f4f4;
   padding: 10px;
-  position: sticky; /* Hold sidebar fast, når man scroller */
-  top: 60px; /* Placer sidebaren lige under headeren */
-  height: 100vh; /* Sørg for sidebar fylder hele højden af vinduet */
+  position: sticky;
+  top: 60px;
+  height: 100vh;
+  display: block;
 }
 
 .sidebar.active{
@@ -232,8 +232,6 @@ footer {
     .sidebar {
       display: none;
       position: relative;
-      width: 200px;
-      z-index: 1000;
     }
 
     .sidebar.active {
@@ -241,7 +239,7 @@ footer {
     }
 
     .toggle-menu {
-      display: block; 
+      display: block;
     }
 
     .toggle-menu:hover {
