@@ -127,8 +127,6 @@ section {
   width: 200px; /* Bredde på sidebar */
   height: 100%; /* Fyld hele højden */
   background-color: #f4f4f4; /* Baggrundsfarve */
-  z-index: 1000; /* Ligger bag menu-toggle */
-  transition: transform 0.3s ease; /* Animation ved visning */
 }
 
 .content {
