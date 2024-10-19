@@ -101,9 +101,10 @@ section {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(4, 1fr); /* Fire kolonner */
+  gap: 16px; /* Afstand mellem grid-elementer */
   padding: 16px;
+  overflow-y: auto; /* Tilføj mulighed for at scrolle nedad hvis nødvendigt */
 }
 
 .grid-item {
@@ -247,5 +248,22 @@ footer {
       margin-left: 0;
     }
   }
+.grid-container {
+  grid-template-columns: 1fr; /* En kolonne på meget små skærme */
+}
+
+@media (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr); /* Tre kolonner på mellemstore skærme */
+  }
+}
+
+@media (max-width: 750px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* To kolonner på små skærme */
+  }
+}
+
+
 
 
