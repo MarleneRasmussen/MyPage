@@ -130,7 +130,7 @@ section {
 
 .sidebar {
   width: 200px;
-  background-color: #f4f4f4;
+  background-color: #333333;
   padding: 10px;
   position: sticky; /* Så sidebaren forbliver på skærmen ved scrolling */
   top: 60px; /* Placer sidebaren under headeren */
