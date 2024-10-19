@@ -145,19 +145,20 @@ section {
 }
 
 .toggle-menu {
-  display: block;
+  display: none; /* Skjul toggle-menuen som standard */
   background-color: #35424a;
   color: white;
   border: none;
   padding: 10px;
   font-size: 18px;
   cursor: pointer;
-  margin-left: 0; /* Sørg for, at knappen er venstrestillet */
+  margin-left: 0;
 }
 
 .toggle-menu:hover {
   background-color: #2c3e50;
 }
+
 
 .content {
   margin-left: 220px;
@@ -239,23 +240,27 @@ footer {
     }
 
     .sidebar {
-      display: none;
-      position: relative;
+      display: none; /* Skjul sidebar som standard på små skærme */
+      position: absolute;
       width: 200px;
       z-index: 1000;
     }
 
     .sidebar.active {
-      display: block;
+      display: block; /* Vis sidebar når den er aktiv */
     }
 
     .sidebar-title {
-      flex-direction: row;
-      justify-content: flex-start;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 12px;
+      background-color: #f4f4f4;
+      border-bottom: 1px solid #ccc;
     }
 
     .toggle-menu {
-      margin-left: 5px;
+      display: block; /* Vis toggle-menuen kun på små skærme */
     }
 
     .toggle-menu:hover {
