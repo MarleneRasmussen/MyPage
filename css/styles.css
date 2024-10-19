@@ -108,8 +108,8 @@ section {
   overflow-y: auto;
 }
 
-.grid-container.shift-down {
-  margin-top: 60px;
+.grid-container.shift-to-one-column {
+  grid-template-columns: 1fr;
 }
 
 .content {
