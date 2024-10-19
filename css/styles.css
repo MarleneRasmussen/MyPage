@@ -132,9 +132,10 @@ section {
 }
 
 .content {
-  margin-left: 220px;
+ /* margin-left: 220px;
   padding: 20px;
-  flex-grow: 1;
+  flex-grow: 1;*/
+  transition: margin-left 0.3s ease; /* Animation ved sidebar visning */
 }
 
 .sidebar button {
@@ -168,10 +169,8 @@ section {
   border: none; /* Ingen kant */
   border-radius: 5px; /* Runde hjørner */
   cursor: pointer; /* Pointer cursor ved hover */
-  position: absolute; /* Absolut positionering */
-  top: 10px; /* Afstand fra toppen */
-  left: 10px; /* Afstand fra venstre */
-  z-index: 1001; /* Sørg for, at knappen er ovenpå */
+  position: relative; /* Position relativ til sidebar */
+  margin-top: 10px; /* Plads over knappen */
 }
 
 footer {
@@ -244,9 +243,5 @@ footer {
     font-size: 12px;
     padding: 6px;
     min-width: 0;
-  }
-
-  .content {
-    transition: margin-left 0.3s ease; /* Animation ved sidebar visning */
   }
 }
