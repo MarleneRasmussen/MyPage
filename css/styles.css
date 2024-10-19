@@ -104,22 +104,15 @@ section {
   grid-template-columns: repeat(4, 1fr); /* Fire kolonner på store skærme */
   gap: 16px;
   padding: 16px;
-  width: 100%;
-  min-height: 100vh; /* Sikrer, at gitteret strækker sig til mindst 100% af skærmhøjden */
-  overflow-y: auto;
+  width: 100%; /* Fylder resten af pladsen ved siden af sidebar */
+  overflow-y: auto; /* Tillad scrolling hvis nødvendigt */
 }
 
 .content {
-  flex-grow: 1;
-  margin-top: 20px; /* Giv plads til at undgå, at billederne ligger for tæt på toppen */
-  padding: 20px;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-main {
   flex-grow: 1;
+  padding: 20px;
+  margin: 0;
 }
 
 .grid-item {
@@ -136,13 +129,12 @@ main {
 }
 
 .sidebar {
-  position: relative;
-  top: 0; /* Justeret til at placere den under headeren */
-  left: 0;
   width: 200px;
-  height: 100%;
   background-color: #f4f4f4;
-  display: block; /* Sidebaren vises som standard */
+  padding: 10px;
+  position: sticky; /* Så sidebaren forbliver på skærmen ved scrolling */
+  top: 60px; /* Placer sidebaren under headeren */
+  height: 100vh; /* Få sidebar til at fylde hele højden af vinduet */
   z-index: 999;
 }
 
