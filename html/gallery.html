@@ -55,16 +55,8 @@
 
 <script>
   function toggleSidebar() {
-    const sidebar = document.querySelector('.sidebar');
+    const sidebar = document.querySelector('.sidebar'); // Ændret til at bruge class selector
     sidebar.classList.toggle('active'); // Toggles active class
-
-    // Hvis sidebar er aktiv, skal vi give margin til content
-    const content = document.querySelector('.content');
-    if (sidebar.classList.contains('active')) {
-      content.style.marginLeft = '200px'; // Plads til sidebar
-    } else {
-      content.style.marginLeft = '0'; // Ingen margin
-    }
   }
 </script>
 
