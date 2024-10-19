@@ -286,7 +286,7 @@ footer {
 
 @media (max-width: 625px) {
   .grid-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   .sidebar.active {
     display: none;
