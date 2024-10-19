@@ -154,6 +154,16 @@ section {
   background-color: #ffffff;
 }
 
+footer {
+  text-align: center;
+  height: 60px;
+  padding: 10px 0;
+  position: relative;
+  background: #35424a;
+  color: #ffffff;
+  margin-top: auto; /* Sørg for, at footeren skubbes til bunden */
+}
+
 /* Responsiv design til mindre skærme */
 @media (max-width: 768px) {
   .sidebar {
@@ -168,11 +178,16 @@ section {
   }
 
   .nav {
-    flex-direction: column; /* Arranger nav i kolonne på mindre skærme */
+    filter: ; /* Arranger nav i kolonne på mindre skærme */
   }
 
   .nav button {
     margin: 5px 0; /* Juster margin mellem knapper */
+  }
+
+  .menu-toggle {
+    display: block; /* Vis menu-ikon på små skærme */
+    margin-bottom: 10px; /* Plads mellem burger og søgefelt */
   }
 
   footer {
