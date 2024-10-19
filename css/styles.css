@@ -239,23 +239,23 @@ footer {
     }
 
     .sidebar {
-      display: none; /* Skjul sidebar som standard på små skærme */
+      display: none;
       position: relative;
       width: 200px;
-      z-index: 1000; /* Sørg for at den er oven på alt andet */
+      z-index: 1000;
     }
 
     .sidebar.active {
-      display: block; /* Vis sidebar når den er aktiv */
+      display: block;
     }
 
     .sidebar-title {
       flex-direction: row;
-      justify-content: flex-start; /* Sørg for, at elementerne er venstrestillet */
+      justify-content: flex-start;
     }
 
     .toggle-menu {
-      margin-left: 0; /* Fjern eventuelle marginer for at sikre den sidder til venstre */
+      margin-left: 5px;
     }
 
     .toggle-menu:hover {
@@ -263,7 +263,7 @@ footer {
     }
 
     .content {
-      margin-left: 0; /* Ingen margen når sidebaren er skjult */
+      margin-left: 0;
     }
   }
 
