@@ -132,10 +132,9 @@ section {
 }
 
 .content {
- /* margin-left: 220px;
+  margin-left: 220px;
   padding: 20px;
-  flex-grow: 1;*/
-  transition: margin-left 0.3s ease; /* Animation ved sidebar visning */
+  flex-grow: 1;
 }
 
 .sidebar button {
@@ -155,22 +154,20 @@ section {
 
 /* Vis sidebar, når menu-toggle knappen klikkes */
 .sidebar.active {
-  display: block; /* Vis sidebar når aktiv */
-  transform: translateX(0); /* Vis sidebar */
+  display: block;
 }
 
-/* Vis menu-toggle på små skærme */
 .menu-toggle {
-  display: block; /* Vis knappen som standard på mobile skærme */
-  width: 40px; /* Giv knappen en bredde */
-  height: 40px; /* Giv knappen en højde */
-  background-color: #35424a; /* Baggrundsfarve */
-  color: #ffffff; /* Tekstfarve */
-  border: none; /* Ingen kant */
-  border-radius: 5px; /* Runde hjørner */
-  cursor: pointer; /* Pointer cursor ved hover */
-  position: relative; /* Position relativ til sidebar */
-  margin-top: 10px; /* Plads over knappen */
+  display: none; /* Skjul knappen som standard */
+  width: 40px;
+  height: 40px;
+  background-color: #35424a;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  margin-top: 10px;
 }
 
 footer {
@@ -183,65 +180,65 @@ footer {
   margin-top: auto;
 }
 
-@media (min-width: 601px) {
-  .menu-toggle {
-    display: none; /* Skjul knappen på skærme større end 600px */
+
+  /* Responsiv design til mindre skærme */
+  @media (max-width: 600px) {
+    .header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 5px;
+    }
+
+    .logo {
+      margin-bottom: 5px;
+    }
+
+    .search-container {
+      width: 100%;
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .search-container input {
+      flex-grow: 1;
+      padding: 6px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-right: 5px;
+    }
+
+    .search-container button {
+      padding: 6px 10px;
+      border: none;
+      background-color: #35424a;
+      color: #ffffff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5px;
+    }
+
+    .nav button {
+      flex: 1;
+      margin: 2px;
+      font-size: 12px;
+      padding: 6px;
+      min-width: 0;
+    }
+
+    .menu-toggle {
+      display: block; /* Skjul knappen på skærme større end 600px */
+    }
+
+    .sidebar {
+      display: none; /* Vis sidebar på større skærme */
+    }
   }
 
-  .sidebar {
-    display: block; /* Vis sidebar på større skærme */
-  }
-}
-
-/* Responsiv design til mindre skærme */
-@media (max-width: 600px) {
-  .header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 5px;
-  }
-
-  .logo {
-    margin-bottom: 5px;
-  }
-
-  .search-container {
-    width: 100%;
-    margin-bottom: 5px;
-    display: flex;
-    justify-content: center;
-  }
-
-  .search-container input {
-    flex-grow: 1;
-    padding: 6px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 5px;
-  }
-
-  .search-container button {
-    padding: 6px 10px;
-    border: none;
-    background-color: #35424a;
-    color: #ffffff;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  .nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 5px;
-  }
-
-  .nav button {
-    flex: 1;
-    margin: 2px;
-    font-size: 12px;
-    padding: 6px;
-    min-width: 0;
-  }
-}
