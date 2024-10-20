@@ -101,6 +101,8 @@ h2 {
   display:flex;
 }
 section {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
   margin-bottom: 40px;
   background: #ffffff;
   padding: 20px;
