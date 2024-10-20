@@ -37,8 +37,11 @@ function filterProducts() {
   const allProducts = document.querySelectorAll('.product-item');
 
   allProducts.forEach(product => {
-    const colorMatch = selectedColors.length === 0 || selectedColors.includes(product.classList[1]);
+    const productColorClasses = Array.from(product.classList).filter(cls => cls !== 'product-item' && cls !== 'product-item');
+
+    const colorMatch = selectedColors.length === 0 || selectedColors.some(color => productColorClasses.includes(color));
     const sizeMatch = selectedSizes.length === 0 || selectedSizes.includes(product.classList[2]);
+
     product.style.display = (colorMatch && sizeMatch) ? 'block' : 'none';
   });
 }
