@@ -1,8 +1,9 @@
 const products = [
   { name: 'Red 1', price: 200, color: 'red', size: 'small',image: '../img/Rød_Lille_Vase.png'  },
   { name: 'Blue 1', price: 250, color: 'blue', size: 'medium' ,image: '../img/Blå_Mellem_Vase.png'},
-  { name: '2 color small', price: 300, color: 'multi', size: 'small', image: '../img/2Farvet_Lille_Vase.png' },
-  { name: '2 color Large', price: 450, color: 'multi', size: 'large', image: '../img/2Farvet_Stor_Vase.png'},
+  { name: '2 color small', price: 300, color: ['multi','white'], size: 'small', image: '../img/2Farvet_Lille_Vase.png' },
+  { name: '2 color large', price: 450, color: ['multi','blue'], size: 'large', image: '../img/2Farvet_Stor_Vase.png'},
+  { name: 'White', price: 420, color: 'white', size: 'large', image: '../img/Hvid_Stor_Vase.png'},
 ];
 
 let cart = [];
