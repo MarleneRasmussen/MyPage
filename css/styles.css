@@ -248,11 +248,13 @@ section {
 }
 
 .filter-section {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: auto;
   background-color: #f4f4f4;
-  padding: 10px;
-  height: 100vh;
-  display: block;
+  padding: 20px;
 }
 
 .filter-section button {
@@ -285,14 +287,13 @@ section {
 }
 
 .cart {
-  position: fixed; /* Gør den fastlåst */
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* Dækker hele bredden */
-  height: 100%; /* Dækker hele højden */
-  background-color: rgba(244, 244, 244, 0.9); /* Semi-transparent baggrund */
-  z-index: 1000; /* Sørg for, at den er oven på alt */
-  padding: 20px; /* Tilføj lidt polstring */
+  width: 100%;
+  height: auto;
+  background-color: #f4f4f4;
+  padding: 20px;
 }
 
 .cart button {
