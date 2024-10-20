@@ -241,22 +241,13 @@ section {
 }
 
 .shop-container {
-  display: flex;
-  justify-content: space-between;
-  overflow-y: auto;
-}
-
-.shopping-cart {
-  width: 25%;
-  background-color: #f4f4f4;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  gap: 20px;
   padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  margin-right: 20px;
 }
 
 .filter-section {
-  width: 20%;
   padding: 20px;
   border-right: 1px solid #ccc;
 }
@@ -265,8 +256,6 @@ section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  width: 60%;
-  padding: 20px;
 }
 
 .product-item {
@@ -276,7 +265,6 @@ section {
 }
 
 .cart {
-  width: 20%;
   padding: 20px;
   border-left: 1px solid #ccc;
 }
