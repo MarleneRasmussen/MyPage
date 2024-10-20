@@ -19,24 +19,31 @@ body {
 }
 
 h1 {
-  font-size: 2.5em; /* Størrelse på h1-overskrift */
-  margin: 20px 0; /* Mellemrum over og under */
-  text-align: center; /* Centreret tekst */
-  color: #35424a; /* Mørk farve for overskriften */
+  font-size: 2.5em;
+  margin: 20px 0;
+  text-align: center;
+  color: #35424a;
 }
 
 h2 {
-  font-size: 2em; /* Størrelse på h2-overskrift */
-  margin: 15px 0; /* Mellemrum over og under */
-  text-align: center; /* Centreret tekst */
-  color: #4a4a4a; /* Lidt lysere farve end h1 */
+  font-size: 2em;
+  margin: 15px 0;
+  text-align: center;
+  color: #4a4a4a;
 }
 
-p {
-  font-size: 16px; /* Størrelse på teksten */
-  line-height: 1.6; /* Linjeafstand for bedre læsbarhed */
-  margin: 20px 0; /* Mellemrum over og under paragrafen */
-  color: #333; /* Tekstfarve */
+.p-dark {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 20px 0;
+  color: #333;
+}
+
+.p-light {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 20px 0;
+  color: #ffffff;
 }
 
 .header {
@@ -130,7 +137,7 @@ section {
 }
 
 .content {
-  display: flex; /* Flexbox layout */
+  display: flex;
   flex-grow: 1;
   padding: 20px;
 }
