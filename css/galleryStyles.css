@@ -4,7 +4,7 @@
   gap: 16px;
   padding: 16px;
   width: 100%;
-  max-height: fit-content;
+  height: max-content;
   overflow-y: auto;
 }
 .content {
