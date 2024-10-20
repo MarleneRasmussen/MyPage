@@ -284,12 +284,6 @@ section {
   display: block;
 }
 
-.toggle-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  margin: 20px 0;
-}
 .toggle-filter{
   display: none;
   background-color: #35424a;
