@@ -248,7 +248,7 @@ section {
 }
 
 .filter-section {
-  width: 200px;
+  width: 100%;
   background-color: #f4f4f4;
   padding: 10px;
   height: 100vh;
@@ -285,11 +285,14 @@ section {
 }
 
 .cart {
-  width: 200px;
-  background-color: #f4f4f4;
-  padding: 10px;
-  height: 100vh;
-  display: block;
+  position: fixed; /* Gør den fastlåst */
+  top: 0;
+  left: 0;
+  width: 100%; /* Dækker hele bredden */
+  height: 100%; /* Dækker hele højden */
+  background-color: rgba(244, 244, 244, 0.9); /* Semi-transparent baggrund */
+  z-index: 1000; /* Sørg for, at den er oven på alt */
+  padding: 20px; /* Tilføj lidt polstring */
 }
 
 .cart button {
@@ -327,7 +330,6 @@ section {
   cursor: pointer;
   margin-left: 0;
 }
-
 
 footer {
   text-align: center;
@@ -442,7 +444,7 @@ footer {
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .shop-container {
     grid-template-columns: 1fr;
   }
