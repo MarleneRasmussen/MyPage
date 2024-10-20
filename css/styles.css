@@ -242,7 +242,7 @@ section {
 
 .shop-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
   gap: 20px;
   padding: 20px;
 }
@@ -253,6 +253,17 @@ section {
   padding: 10px;
   height: 100vh;
   display: block;
+}
+
+.filter-section button {
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+  padding: 10px;
+  background-color: RGB(184,178,164);
+  color: #35424a;
+  border: none;
+  cursor: pointer;
 }
 .filter-section.active {
     display: block;
@@ -280,6 +291,18 @@ section {
   height: 100vh;
   display: block;
 }
+
+.cart button {
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+  padding: 10px;
+  background-color: RGB(184,178,164);
+  color: #35424a;
+  border: none;
+  cursor: pointer;
+}
+
 .cart.active{
   display: block;
 }
