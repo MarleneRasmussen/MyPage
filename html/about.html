@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="../css/aboutStyles.css">
 </head>
 
+<script>src="../js/aboutApp.js"</script>
+
 <body>
 <header class="header">
   <div class="logo">
@@ -77,21 +79,5 @@
   <p class="p-light">&copy; 2024 Hugged by Hand. </p>
 </footer>
 
-<script>
-  function sendContact() {
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-
-    if (name && email) {
-
-      alert(`Thank you, ${name}! We will contact you as soon as possible.`);
-
-      document.getElementById('name').value = '';
-      document.getElementById('email').value = '';
-    } else {
-      alert('Please fill in all fields.');
-    }
-  }
-</script>
 </body>
 </html>
