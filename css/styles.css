@@ -482,6 +482,15 @@ footer {
     grid-template-rows: repeat(2, auto);
   }
 }
+@media (max-width: 920px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shop-container {
+    grid-template-columns: 200px 200px 1fr;
+  }
+}
 
   @media (max-width: 635px) {
     .grid-container {
