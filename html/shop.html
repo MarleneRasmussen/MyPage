@@ -48,6 +48,7 @@
     </aside>
 
   <div class="product-grid">
+
   </div>
 
   </div>
@@ -75,6 +76,7 @@
       const productItem = document.createElement('div');
       productItem.classList.add('product-item', product.color, product.size);
       productItem.innerHTML = `
+          <img src="${product.image}">
           <h3>${product.name}</h3>
           <p>Pris: ${product.price} DKK</p>
           <button onclick="addToCart('${product.name}', ${product.price})">Tilføj til kurv</button>
