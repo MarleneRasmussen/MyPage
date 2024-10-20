@@ -18,6 +18,27 @@ body {
   color: #333;
 }
 
+h1 {
+  font-size: 2.5em; /* Størrelse på h1-overskrift */
+  margin: 20px 0; /* Mellemrum over og under */
+  text-align: center; /* Centreret tekst */
+  color: #35424a; /* Mørk farve for overskriften */
+}
+
+h2 {
+  font-size: 2em; /* Størrelse på h2-overskrift */
+  margin: 15px 0; /* Mellemrum over og under */
+  text-align: center; /* Centreret tekst */
+  color: #4a4a4a; /* Lidt lysere farve end h1 */
+}
+
+p {
+  font-size: 16px; /* Størrelse på teksten */
+  line-height: 1.6; /* Linjeafstand for bedre læsbarhed */
+  margin: 20px 0; /* Mellemrum over og under paragrafen */
+  color: #333; /* Tekstfarve */
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -172,6 +193,7 @@ section {
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   margin-top: 40px;
+  margin-left: 20px;
 }
 
 .contact-info {
@@ -286,6 +308,10 @@ footer {
   .sidebar.active {
     display: block;
   }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+  }
 }
 
   @media (max-width: 635px) {
@@ -295,6 +321,11 @@ footer {
 
     .grid-container.shift-to-one-column {
       grid-template-columns: 2fr;
+    }
+
+    .contact-grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, auto);
     }
   }
 
@@ -306,7 +337,13 @@ footer {
   .grid-container.shift-to-one-column {
     grid-template-columns: 1fr;
   }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+  }
 }
+
 
 
 
