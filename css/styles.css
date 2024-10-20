@@ -250,6 +250,11 @@ section {
 .filter-section {
   padding: 20px;
   border-right: 1px solid #ccc;
+  display: block;
+}
+
+.filter-section.active {
+  display: block;
 }
 
 .product-grid {
@@ -267,12 +272,39 @@ section {
 .cart {
   padding: 20px;
   border-left: 1px solid #ccc;
+  display: block;
+}
+
+.cart.active {
+  display: block;
 }
 
 .toggle-grid{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+}
+
+.toggle-cart{
+  display: none;
+  background-color: #35424a;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 0;
+}
+
+.toggle-filter {
+  display: none;
+  background-color: #35424a;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 0;
 }
 
 footer {
