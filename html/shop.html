@@ -26,6 +26,10 @@
 </header>
 
 <main>
+  <div class="toggle-grid">
+  <button class="toggle-filter" onclick="toggleFilter()">☰</button>
+  <button class="toggle-cart" onclick="toggleCart()">&#xf291;</button>
+  </div>
   <div class="shop-container">
   <aside class="filter-section">
     <h2>Filter</h2>
@@ -119,6 +123,16 @@
 
   // Initial display of products
   displayProducts();
+
+  function toggleFilter() {
+    const filterSection = document.querySelector('.filter-section');
+    filterSection.classList.toggle('active');
+  }
+
+  function toggleCart() {
+    const cartSection = document.querySelector('.cart');
+    cartSection.classList.toggle('active');
+  }
 </script>
 
 </body>
