@@ -395,6 +395,13 @@ footer {
       padding: 6px;
       min-width: 0;
     }
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .shop-container {
+      grid-template-columns: 1fr 1fr 2fr;
+    }
   }
 @media (max-width: 635px) {
   .sidebar {
@@ -461,6 +468,15 @@ footer {
       display: block;
     }
   }
+@media (max-width: 920px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shop-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 
 @media (max-width: 805px) {
   .grid-container {
