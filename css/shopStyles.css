@@ -1,0 +1,136 @@
+.shop-container {
+  display: grid;
+  grid-template-columns: 200px 200px 3fr;
+  gap: 20px;
+  padding: 20px;
+}
+.filter-section {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+.filter-section button {
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+  padding: 10px;
+  background-color: RGB(184,178,164);
+  color: #35424a;
+  border: none;
+  cursor: pointer;
+}
+.filter-section.active {
+  display: block;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 16px;
+  width: 100%;
+  overflow-y: auto;
+}
+.product-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+.product-item img{
+  width: 100%;
+  height: auto;
+}
+.cart {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+.cart button {
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+  padding: 10px;
+  background-color: RGB(184,178,164);
+  color: #35424a;
+  border: none;
+  cursor: pointer;
+}
+.cart.active{
+  display: block;
+}
+.toggle-filter{
+  display: none;
+  background-color: #35424a;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 0;
+}
+.toggle-cart{
+  display: none;
+  background-color: #35424a;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 0;
+}
+
+@media (max-width: 1200px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .shop-container {
+    grid-template-columns: 200px 200px 2fr;
+  }
+}
+
+@media (max-width: 960px){
+  .product-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .shop-container {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .cart {
+    display: none;
+    position: relative;
+  }
+  .filter-section {
+    display: none;
+    position: relative;
+  }
+  .cart.active {
+    display: block;
+  }
+  .filter-section.active {
+    display: block;
+  }
+  .toggle-cart {
+    display: block;
+  }
+  .toggle-filter {
+    display: block;
+  }
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .shop-container {
+    grid-template-columns: repeat(1,1fr);
+  }
+}
