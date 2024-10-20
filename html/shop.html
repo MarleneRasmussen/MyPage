@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hugged by Hand</title>
+  <title>Shop - Hugged by Hand</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
-
 <body>
 <header class="header">
   <div class="logo">
@@ -20,18 +19,102 @@
     <button onclick="window.location.href='design.html'">Design</button>
     <button onclick="window.location.href='gallery.html'">Gallery</button>
   </nav>
-  <div class="search-container">
-    <input type="text" placeholder="Search..." />
-    <button type="button">Search</button>
-  </div>
 </header>
 
 <main>
-  <p1>Shop</p1>
+  <div class="shop-container">
+  <aside class="filter-section">
+    <h2>Filter</h2>
+    <h3>Farve</h3>
+    <label><input type="checkbox" value="red" onchange="filterProducts()"> Rød</label><br>
+    <label><input type="checkbox" value="blue" onchange="filterProducts()"> Blå</label><br>
+    <label><input type="checkbox" value="green" onchange="filterProducts()"> Grøn</label><br>
+    <h3>Størrelse</h3>
+    <label><input type="checkbox" value="small" onchange="filterProducts()"> Lille</label><br>
+    <label><input type="checkbox" value="medium" onchange="filterProducts()"> Medium</label><br>
+    <label><input type="checkbox" value="large" onchange="filterProducts()"> Stor</label><br>
+  </aside>
+
+  <div class="product-grid">
+  </div>
+
+  <aside class="cart">
+    <h2>Indkøbskurv</h2>
+    <div class="cart-items"></div>
+    <p>Total: <span class="total-price">0</span> DKK</p>
+  </aside>
+  </div>
 </main>
 
 <footer>
-  <p class="p-light">&copy; 2024 Hugged by Hand. Alle rettigheder forbeholdes.</p>
+  <p>&copy; 2024 Hugged by Hand. Alle rettigheder forbeholdes.</p>
 </footer>
+
+<script>
+  const products = [
+    { name: 'Keramik Vare 1', price: 200, color: 'red', size: 'small' },
+    { name: 'Keramik Vare 2', price: 250, color: 'blue', size: 'medium' },
+    { name: 'Keramik Vare 3', price: 300, color: 'green', size: 'large' },
+  ];
+
+  let cart = [];
+  let total = 0;
+
+  function displayProducts() {
+    const productGrid = document.querySelector('.product-grid');
+    productGrid.innerHTML = '';
+
+    products.forEach(product => {
+      const productItem = document.createElement('div');
+      productItem.classList.add('product-item', product.color, product.size);
+      productItem.innerHTML = `
+          <h3>${product.name}</h3>
+          <p>Pris: ${product.price} DKK</p>
+          <button onclick="addToCart('${product.name}', ${product.price})">Tilføj til kurv</button>
+      `;
+      productGrid.appendChild(productItem);
+    });
+  }
+
+  function filterProducts() {
+    const selectedColors = Array.from(document.querySelectorAll('.filter-section input[type="checkbox"]:checked'))
+      .filter(input => input.value !== 'small' && input.value !== 'medium' && input.value !== 'large')
+      .map(input => input.value);
+    const selectedSizes = Array.from(document.querySelectorAll('.filter-section input[type="checkbox"]:checked'))
+      .filter(input => input.value === 'small' || input.value === 'medium' || input.value === 'large')
+      .map(input => input.value);
+
+    const allProducts = document.querySelectorAll('.product-item');
+
+    allProducts.forEach(product => {
+      const colorMatch = selectedColors.length === 0 || selectedColors.includes(product.classList[1]);
+      const sizeMatch = selectedSizes.length === 0 || selectedSizes.includes(product.classList[2]);
+      product.style.display = (colorMatch && sizeMatch) ? 'block' : 'none';
+    });
+  }
+
+  function addToCart(name, price) {
+    cart.push({ name, price });
+    total += price;
+    updateCart();
+  }
+
+  function updateCart() {
+    const cartItemsContainer = document.querySelector('.cart-items');
+    cartItemsContainer.innerHTML = '';
+
+    cart.forEach(item => {
+      const cartItem = document.createElement('div');
+      cartItem.textContent = `${item.name} - ${item.price} DKK`;
+      cartItemsContainer.appendChild(cartItem);
+    });
+
+    document.querySelector('.total-price').textContent = total;
+  }
+
+  // Initial display of products
+  displayProducts();
+</script>
+
 </body>
 </html>
