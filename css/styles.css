@@ -129,8 +129,6 @@ section {
   overflow-y: auto;
 }
 
-
-
 .content {
   display: flex; /* Flexbox layout */
   flex-grow: 1;
@@ -194,6 +192,8 @@ section {
   gap: 20px;
   margin-top: 40px;
   margin-left: 20px;
+  background: #35424a;
+  color: #ffffff;
 }
 
 .contact-info {
