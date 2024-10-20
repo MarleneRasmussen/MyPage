@@ -286,6 +286,11 @@ section {
   text-align: center;
 }
 
+.product-item image{
+  width: 100%;
+  height: auto;
+}
+
 .cart {
   position: sticky;
   top: 0;
