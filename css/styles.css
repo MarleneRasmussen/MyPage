@@ -167,6 +167,24 @@ section {
   cursor: pointer;
 }
 
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.contact-info {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.map-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
 footer {
   text-align: center;
   height: 60px;
