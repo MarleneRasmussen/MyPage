@@ -248,7 +248,7 @@ section {
 }
 
 .filter-section {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -287,7 +287,7 @@ section {
 }
 
 .cart {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
