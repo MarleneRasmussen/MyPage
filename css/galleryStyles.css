@@ -83,6 +83,9 @@
   .sidebar.active {
     display: block;
   }
+  .toggle-menu{
+    display: block;
+  }
   .toggle-menu:hover {
     background-color: #2c3e50;
   }
