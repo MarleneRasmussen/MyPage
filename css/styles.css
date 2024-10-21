@@ -89,6 +89,7 @@ p{
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-right: 5px;
+  margin-top: 16px;
 }
 .search-container button {
   padding: 6px 12px;
@@ -112,6 +113,7 @@ p{
   align-items: center;
   gap: 20px;
   padding: 20px;
+  background-color: #35424a;
 }
 .grid-section img{
   width: 100%;
@@ -221,13 +223,16 @@ footer {
       padding: 6px;
       min-width: 0;
     }
+    .grid-section {
+      grid-template-columns: 1fr;
+    }
   }
-/*
-@media (max-width: 635px) {
-  .toggle-menu {
-    display: block;
+@media (max-width: 950px) {
+  .course-container {
+    grid-template-columns: 1fr;
   }
-}*/
+}
+
 
 
 
