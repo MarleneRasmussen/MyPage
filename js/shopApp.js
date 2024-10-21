@@ -1,8 +1,8 @@
 const products = [
   { name: 'Red 1', price: 200, color: 'red', size: 'small',image: '../img/Rød_Lille_Vase.png'  },
   { name: 'Blue 1', price: 250, color: 'blue', size: 'medium' ,image: '../img/Blå_Mellem_Vase.png'},
-  { name: '2 color small', price: 300, color: ['multi','white'], size: 'small', image: '../img/2Farvet_Lille_Vase.png' },
-  { name: '2 color large', price: 450, color: ['multi','blue'], size: 'large', image: '../img/2Farvet_Stor_Vase.png'},
+  { name: '2 color small', price: 300, color: 'white', size: 'small', image: '../img/2Farvet_Lille_Vase.png' },
+  { name: '2 color large', price: 450, color: 'blue', size: 'large', image: '../img/2Farvet_Stor_Vase.png'},
   { name: 'White', price: 420, color: 'white', size: 'large', image: '../img/Hvid_Stor_Vase.png'},
 ];
 
@@ -19,7 +19,7 @@ function displayProducts() {
     productItem.innerHTML = `
           <img src="${product.image}">
           <h3>${product.name}</h3>
-          <p>Pris: ${product.price} DKK</p>
+          <p-dark>Pris: ${product.price} DKK</p-dark>
           <button onclick="addToCart('${product.name}', ${product.price})">Tilføj til kurv</button>
       `;
     productGrid.appendChild(productItem);
@@ -37,11 +37,8 @@ function filterProducts() {
   const allProducts = document.querySelectorAll('.product-item');
 
   allProducts.forEach(product => {
-    const productColorClasses = Array.from(product.classList).filter(cls => cls !== 'product-item' && cls !== 'product-item');
-
-    const colorMatch = selectedColors.length === 0 || selectedColors.some(color => productColorClasses.includes(color));
+    const colorMatch = selectedColors.length === 0 || selectedColors.includes(product.classList[1]);
     const sizeMatch = selectedSizes.length === 0 || selectedSizes.includes(product.classList[2]);
-
     product.style.display = (colorMatch && sizeMatch) ? 'block' : 'none';
   });
 }
@@ -65,8 +62,24 @@ function updateCart() {
 
   document.querySelector('.total-price').textContent = total;
 }
+function clearCart() {
+  cart.length = 0;
+  total = 0;
+  updateCart();
+}
 
-// Initial display of products
+function checkout() {
+  if (cart.length > 0) {
+    alert("Thank you for the order!");
+    clearCart();
+  } else {
+    alert("The cart is empty");
+  }
+}
+
+document.querySelector('.clear-cart').addEventListener('click', clearCart);
+document.querySelector('.checkout').addEventListener('click', checkout);
+
 displayProducts();
 
 function toggleFilter() {

@@ -87,6 +87,24 @@
   cursor: pointer;
   margin-left: 0;
 }
+.clear-cart{
+  margin: 10px 0;
+  width: 100%;
+  padding: 10px;
+  background-color: RGB(184,178,164);
+  color: #35424a;
+  border: none;
+  cursor: pointer;
+}
+.checkout{
+  margin: 10px 0;
+  width: 100%;
+  padding: 10px;
+  background-color: RGB(184,178,164);
+  color: #35424a;
+  border: none;
+  cursor: pointer;
+}
 
 @media (max-width: 1200px) {
   .product-grid {
