@@ -1,6 +1,6 @@
 .design{
   display:grid;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: 220px 1fr;
 }
 .tools {
   position: sticky;
@@ -20,6 +20,13 @@
   color: #35424a;
   border: none;
   cursor: pointer;
+}
+
+@media(max-width: 500px){
+  .design{
+    display:grid;
+    grid-template-columns: 1fr;
+  }
 }
 
 

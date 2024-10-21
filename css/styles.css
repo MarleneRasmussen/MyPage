@@ -27,10 +27,16 @@ h2 {
   color: #4a4a4a;
 }
 h3{
-  font-size: 1.5em;
-  margin: 10px 0;
+  font-size: 1em;
+  margin: 7px 0;
   text-align: center;
   color: #ffffff;
+}
+.h3-dark{
+  font-size: 1em;
+  margin: 7px 0;
+  text-align: center;
+  color: #333;
 }
 p{
   font-size: 16px;
