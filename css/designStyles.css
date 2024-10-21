@@ -1,8 +1,8 @@
 .design{
   display:grid;
-  grid-template-columns: 170px 1fr 1fr;
+  grid-template-columns: 150px 1fr;
 }
-.cart {
+.tools {
   position: sticky;
   top: 0;
   left: 0;
@@ -11,7 +11,7 @@
   background-color: #f4f4f4;
   padding: 20px;
 }
-.cart button {
+.tools button {
   display: block;
   margin: 10px 0;
   width: 100%;
@@ -21,3 +21,5 @@
   border: none;
   cursor: pointer;
 }
+
+
