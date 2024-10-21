@@ -102,7 +102,7 @@ h2 {
 }
 .grid-section {
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 500px 1fr;
   align-items: center;
   gap: 20px;
   padding: 20px;
