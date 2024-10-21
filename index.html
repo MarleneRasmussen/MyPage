@@ -31,24 +31,42 @@
 </header>
 
 <main>
-  <section>
-    <h2>Our passion!</h2>
-    <div class="image-right">
-      <img src="img/Keramik.png" alt="Picture of handcrafting">
-      <p class="p-dark">Indhold til billede</p>
+  <section class="registration-section">
+    <h2>Join us for the next course, it is not too late!</h2>
+
+    <div class="curse-container">
+      <div class="image-column">
+        <img src="img/Kursus.png" alt="Picture of last course">
+      </div>
+      <div class="form-column">
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="phone">Phone number:</label>
+          <input type="tel" id="phone" name="phone" required>
+
+          <label for="date">Select a date:</label>
+          <select id="date" name="date" required>
+            <option value="date1">07.11.2024</option>
+            <option value="date2">14.11.2024</option>
+            <option value="date3">21.11.2024</option>
+          </select>
+
+          <button class="submit" type="submit">Sign up for curse</button>
+        </form>
+      </div>
     </div>
-
   </section>
 
-  <section id="page2">
-    <h2>Side 2</h2>
-    <p class="p-dark">Indhold til Side 2.</p>
+  <section class="grid-section">
+    <h2>Our Passion!</h2>
+    <div class="image-right">
+      <p class="p-dark">Indhold til billede</p>
+      <img src="img/Keramik.png" alt="Picture of handcrafting">
+    </div>
   </section>
 
-  <section id="page3">
-    <h2>Side 3</h2>
-    <p class="p-dark">Indhold til Side 3.</p>
-  </section>
 </main>
 
 <footer>
