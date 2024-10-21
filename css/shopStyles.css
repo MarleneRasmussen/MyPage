@@ -26,6 +26,10 @@
 .filter-section.active {
   display: block;
 }
+.filter label{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+}
 .product-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
