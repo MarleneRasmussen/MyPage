@@ -1,0 +1,23 @@
+.design{
+  display:grid;
+  grid-template-columns: 170px 1fr 1fr;
+}
+.cart {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+.cart button {
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+  padding: 10px;
+  background-color: RGB(184,178,164);
+  color: #35424a;
+  border: none;
+  cursor: pointer;
+}
