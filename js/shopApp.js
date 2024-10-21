@@ -19,8 +19,8 @@ function displayProducts() {
     productItem.innerHTML = `
           <img src="${product.image}">
           <h3>${product.name}</h3>
-          <p-dark>Pris: ${product.price} DKK</p-dark>
-          <button onclick="addToCart('${product.name}', ${product.price})">Tilføj til kurv</button>
+          <p class="p-dark">Pris: ${product.price} DKK</p-dark>
+          <button class="add-button" onclick="addToCart('${product.name}', ${product.price})">Tilføj til kurv</button>
       `;
     productGrid.appendChild(productItem);
   });
