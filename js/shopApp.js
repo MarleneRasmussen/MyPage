@@ -18,7 +18,7 @@ function displayProducts() {
     productItem.classList.add('product-item', product.color, product.size);
     productItem.innerHTML = `
           <img src="${product.image}">
-          <h3>${product.name}</h3>
+          <h3 class="h3-dark">${product.name}</h3>
           <p class="p-dark">Pris: ${product.price} DKK</p-dark>
           <button class="add-button" onclick="addToCart('${product.name}', ${product.price})">Tilføj til kurv</button>
       `;
