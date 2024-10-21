@@ -27,7 +27,42 @@
 </header>
 
 <main>
-  <p>Design</p>
+  <section class="design">
+    <aside class="tools">
+      <label for="shape">Choose a Shape:</label>
+      <select id="shape" name="shape" required>
+        <option value="date1">Round</option>
+        <option value="date2">Orval</option>
+        <option value="date3">Square</option>
+      </select>
+
+      <label for="size">Choose a Size:</label>
+      <select id="size" name="size" required>
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+      </select>
+
+      <label for="pattern">Choose a Pattern:</label>
+      <select id="pattern" name="pattern" required>
+        <option value="pattern1">Pattern 1</option>
+        <option value="pattern2">Pattern 2</option>
+        <option value="pattern3">Pattern 3</option>
+      </select>
+    </aside>
+
+    <div class="home-design">
+        <img src="img/din">
+    </div>
+    
+    <aside class="cart">
+      <h2>Cart</h2>
+      <div class="cart-items"></div>
+      <p>Total: <span class="total-price">0</span> DKK</p>
+      <button class="clear-cart">Clear cart</button>
+      <button class="checkout">Place order</button>
+    </aside>
+  </section>
 </main>
 
 <footer>
