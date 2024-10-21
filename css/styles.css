@@ -113,6 +113,10 @@ p{
   gap: 20px;
   padding: 20px;
 }
+.grid-section img{
+  width: 100%;
+  height: auto;
+}
 .image-right {
   display: flex;
   flex-direction: column;
