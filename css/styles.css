@@ -26,6 +26,12 @@ h2 {
   text-align: center;
   color: #4a4a4a;
 }
+p{
+  font-size: 16px;
+  line-height: 1.6;
+  margin: auto;
+  color: #333;
+}
 .p-dark {
   font-size: 16px;
   line-height: 1.6;
