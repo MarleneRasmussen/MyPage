@@ -26,7 +26,7 @@
 .filter-section.active {
   display: block;
 }
-.filter label{
+.filter-section label{
   display:grid;
   grid-template-columns: 1fr 1fr;
 }
